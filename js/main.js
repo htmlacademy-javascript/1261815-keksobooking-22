@@ -12,4 +12,4 @@ const randomFloat = function (from, to, signsQuantity) {
 
 }
 
-console.log(randomFloat(30, 203, 4));
+randomFloat(30, 203, 4);
