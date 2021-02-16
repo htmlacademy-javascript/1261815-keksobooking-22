@@ -80,32 +80,28 @@ const getRandomArrayElement = (elements) => {
 }
 
 const createOffer = () => {
-  let addressX = getRandomNumber(0, 180);
-  let addressY = getRandomNumber(0, 180);
-  let price = getRandomNumber(500000, 1400000);
-  let rooms = getRandomNumber(1, 8);
-  let guests = getRandomNumber(1, 16);
-  let locationX = getRandomNumber(35.65000, 35.70000, 5);
-  let locationY =getRandomNumber(139.70000, 139.80000, 5);
-
+  
   return {
-    author: getRandomArrayElement(AVATAR),
-    offer: 
-    getRandomArrayElement(TITLE) + ' Координата X: ' +
-    addressX + ' Координата Y: ' + 
-    addressY + ' Цена: ' +
-    price + 'р ' + 
-    getRandomArrayElement(TYPE) + ' Количество комнат: ' +
-    rooms + ' Количество гостей: ' +
-    guests + ' ' +
-    getRandomArrayElement(CHECKIN) + ' ' + 
-    getRandomArrayElement(CHECKOUT) + ' ' + 
-    FEATURES.slice(0, getRandomNumber(0, FEATURES.length)) + ' ' +
-    getRandomArrayElement(DESCRIPTION) + ' ' +
-    PHOTOS.slice(0, getRandomNumber(0, PHOTOS.length)),
-    location: 
-    'Координата X: ' + locationX + ' ' +
-    'Координата Y: ' + locationY,
+    author: {
+      avatar: getRandomArrayElement(AVATAR),
+    },
+    offer: {
+      title: getRandomArrayElement(TITLE),
+      address: getRandomNumber(0, 180) + ' ' + getRandomNumber(0, 180),
+      price: getRandomNumber(500000, 1400000),
+      type: getRandomArrayElement(TYPE),
+      rooms: getRandomNumber(1, 8),
+      guests: getRandomNumber(1, 16),
+      checkin: getRandomArrayElement(CHECKIN),
+      checkout: getRandomArrayElement(CHECKOUT),
+      features: FEATURES.slice(0, getRandomNumber(0, FEATURES.length)),
+      description: getRandomArrayElement(DESCRIPTION),
+      photos: PHOTOS.slice(0, getRandomNumber(0, PHOTOS.length)),
+    },
+    location: {
+      locationX: getRandomNumber(35.65000, 35.70000, 5),
+      locationY: getRandomNumber(139.70000, 139.80000, 5),
+    }
   }
 };
 
