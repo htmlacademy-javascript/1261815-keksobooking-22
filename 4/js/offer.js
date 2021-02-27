@@ -1,5 +1,4 @@
-import {getRandomNumber} from './random-number.js';
-import {getRandomArrayElement} from './random-array-element.js';
+import {getRandomNumber, getRandomArrayElement} from './utils.js';
 
 const AVATAR = [
   'img/avatars/user01.png',
@@ -91,4 +90,4 @@ const createOffer = () => {
   
 const newOffer = new Array(NEW_OFFER_COUNT).fill(null).map(() => createOffer());
   
-console.log(newOffer);
+newOffer;
