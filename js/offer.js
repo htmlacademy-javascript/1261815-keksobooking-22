@@ -88,6 +88,6 @@ const createOffer = () => {
   }
 };
   
-const newOffer = new Array(NEW_OFFER_COUNT).fill(null).map(() => createOffer());
-  
-newOffer;
+let createOffers = () => new Array(NEW_OFFER_COUNT).fill(null).map(() => createOffer());
+
+export {createOffers};
